@@ -7,62 +7,108 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: linear-gradient(to bottom right, #bbf7d0, #fef08a, #fbcfe8);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom right, #d1fae5, #fef08a, #fbcfe8);
       text-align: center;
       padding: 2rem;
+      background-image: url('/fonk.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #1f2937;
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     h1 {
-      font-size: 3rem;
-      color: #15803d;
+      font-size: 3.5rem;
+      color: #065f46;
       font-weight: 900;
-      text-shadow: 1px 1px #a3e635;
+      text-shadow: 2px 2px #bbf7d0;
+      background: rgba(255, 255, 255, 0.7);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      animation: bounceIn 1.5s ease-out;
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.05); opacity: 1; }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); }
     }
     p {
-      color: #166534;
-      font-size: 1.2rem;
+      color: #065f46;
+      font-size: 1.3rem;
       margin-top: 1rem;
+      background: rgba(255, 255, 255, 0.8);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      animation: slideUp 1s ease-in-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     .card {
-      max-width: 600px;
+      max-width: 700px;
       margin: 2rem auto;
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 1.5rem;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
       padding: 2rem;
       text-align: left;
+      animation: fadeInCard 1.8s ease-in-out;
+    }
+    @keyframes fadeInCard {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .card h2 {
-      color: #16a34a;
-      font-size: 1.5rem;
+      color: #047857;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
     .card p {
       color: #374151;
       margin: 0.5rem 0;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background-color: #22c55e;
+      background-color: #34d399;
       color: white;
-      padding: 0.75rem 1.5rem;
-      margin-top: 1.5rem;
+      padding: 0.85rem 1.6rem;
+      margin-top: 2rem;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: 0.75rem;
       font-weight: bold;
+      font-size: 1.1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      animation: pulse 2s infinite;
     }
     .btn:hover {
-      background-color: #16a34a;
+      background-color: #10b981;
+      transform: scale(1.05);
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
     footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #6b7280;
+      margin-top: 4rem;
+      font-size: 1rem;
+      color: #f0fdf4;
+      text-shadow: 1px 1px #000;
+      animation: fadeIn 3s ease-in;
     }
   </style>
 </head>
@@ -76,7 +122,7 @@
     <p><strong>Ticker:</strong> $FONK</p>
     <p><strong>Contract Address:</strong><br />78tG5Bp1VXnjuZm81CNgaB2J4j3ADSK5sBMNCJ4kbonk</p>
     <p><strong>Blockchain:</strong> BonkFun</p>
-    <button class="btn">🚀 Join the Fonk Frenzy</button>
+    <a target="_blank" href="https://x.com/fonkthefrog" class="btn">🚀 Join the Fonk Frenzy</a>
   </div>
 
   <footer>&copy; 2025 $FONK | Fonk the Frog | Born to Meme on BonkFun</footer>
